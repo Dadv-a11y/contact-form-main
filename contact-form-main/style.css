@@ -1,0 +1,135 @@
+
+:root{
+--green-200-lighter: hsl(148, 38%, 91%);
+--green-600-medium: hsl(169, 82%, 27%);
+--red: hsl(0, 66%, 54%);
+--white: hsl(0, 0%, 100%);
+--grey-500-medium: hsl(186, 15%, 59%);
+--grey-900-darker: hsl(187, 24%, 22%);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.success{
+    background-color: var(--grey-900-darker);
+    padding: 10px;
+    margin: 10px 0 5px;
+    border-radius: 10px;
+    color: var(--white);
+    display: none;
+}
+h2{
+    font-weight: 400;
+}
+body{
+    font-family: 'Karla' , sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--green-200-lighter);
+}
+ form{
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+ }
+ h1{
+    margin-bottom: 20px;
+    font-weight: 700;
+ }
+ .name{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+ }
+.group{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0 10px 0;
+}
+
+label{
+    font-size: 16px;
+    padding: 0 0 5px 0;
+}
+input{
+    padding: 5px;
+    border-radius: 5px;
+    border: var(--grey-500-medium) 1px solid;
+}
+
+.error-message{
+    color: var(--red);
+    padding-top: 5px;
+    display: none;
+}
+.empty{
+   border-color: var(--red);
+}
+
+.required{
+    color: var(--green-600-medium);
+    font-weight: 600;
+}
+
+fieldset{
+    border: none;
+    padding:  10px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.option{
+     border: var(--grey-500-medium) 1px solid; 
+    padding: 10px 50px 10px 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.fill{
+    background-color: var(--green-200-lighter);
+    border:  var(--green-600-medium) 2px solid;
+    padding: 10px 50px 10px 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+textarea{
+    height: 5em;
+}
+
+button{
+    width: 100%;
+    padding: 5px 0;
+    background-color: var(--green-600-medium);
+    border: none;
+    color: var(--white);
+}
+
+@media screen  and ( max-width: 768px){
+    .name{
+        flex-direction: column;
+        gap: 0;
+     }
+     fieldset{
+        flex-direction: column;
+        gap: 15px;
+    }
+    textarea{
+        height: 8em;
+    }
+    form{
+        max-width: 22em;
+    }
+    .success{
+       position: absolute;
+         top: 0;
+         right: 20%;
+         left: 20%;
+        border-radius:  5px;
+    }
+}
